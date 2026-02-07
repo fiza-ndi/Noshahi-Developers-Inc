@@ -9,11 +9,8 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
-
 <body>
-
 <div class="shape shape2"></div>
 <div class="shape shape3"></div>
 
@@ -31,15 +28,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
   <!-- MENU -->
   <div class="nav-links" id="navLinks">
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">Services</a>
-    <a href="#">About</a>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
     <a href="#">Contact</a>
   </div>
 
 </div>
-
 
 <!-- ===== HERO SECTION ===== -->
 
@@ -86,27 +83,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
+<section style="
+background:linear-gradient(120deg,#fffaf0,#fff8e5);
+padding:80px 20px;
+text-align:center;
+overflow:hidden;
+position:relative;
+border-radius:60px;
+margin:40px 20px;
+">
 
-<!-- ===== TRUST LOGOS ===== -->
+  <!-- TITLE -->
+  <p style="font-size:clamp(22px,4vw,32px); font-weight:700; color:#0f172a; margin-bottom:50px;">
+    Trusted By Industry Partners
+    
+    <span style="
+    display:block;
+    width:70px;
+    height:4px;
+    background:#f4c430;
+    border-radius:2px;
+    margin:15px auto 0;
+    box-shadow:0 0 10px rgba(244,196,48,0.5);
+    "></span>
+  </p>
 
-<section class="trust-strip">
+  <!-- LOGOS -->
+  <div style="width:100%; overflow:hidden;">
 
-  <p class="trust-title">Trusted By Industry Partners</p>
+    <div class="trustScroll" style="
+    display:flex;
+    gap:clamp(30px,6vw,80px);
+    align-items:center;
+    animation:scrollTrust 28s linear infinite;
+    ">
 
-  <div class="trust-logos">
-    <img src="img/logo1.png">
-    <img src="img/logo2.png">
-    <img src="img/logo3.png">
-    <img src="img/logo4.png">
-    <img src="img/logo5.png">
+      <img src="img/profile 1.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
+      <img src="img/profile 2.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
+      <img src="img/profile 3.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
+      <img src="img/profile 4.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
+      <img src="img/profile 5.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
+      <!-- Duplicate for smooth loop -->
+      <img src="img/profile 1.jpg" style="height:clamp(40px,6vw,60px);">
+      <img src="img/profile 2.jpg" style="height:clamp(40px,6vw,60px);">
+      <img src="img/profile 3.jpg" style="height:clamp(40px,6vw,60px);">
+      <img src="img/profile 4.jpg" style="height:clamp(40px,6vw,60px);">
+      <img src="img/profile 5.jpg" style="height:clamp(40px,6vw,60px);">
+
+    </div>
+
   </div>
 
 </section>
-
-
-
-
-
 
 
 
@@ -167,8 +195,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
-
-
 <!-- LANDMARK SPLIT BANNER -->
 
 <section class="landmark-banner">
@@ -189,7 +215,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   </div>
 
 </section>
-
 
 <!-- ===== PROJECT SHOWCASE ===== -->
 
@@ -235,7 +260,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   </div>
 
 </section>
-
 
 <!-- ===== IMPACT / STATS PRO ===== -->
 
@@ -291,7 +315,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   </div>
 
 </section>
-
 
 <!-- ===== TESTIMONIALS ===== -->
 
@@ -364,10 +387,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   </div>
 
 </section>
-
-
-
-
 
 <!-- ===== PREMIUM FOOTER ===== -->
 <footer class="footer">
@@ -459,6 +478,38 @@ toggle.onclick = () => {
     toggle.innerHTML = "☰";   // hamburger
   }
 };
+const trustResponsive = document.createElement("style");
+
+trustResponsive.innerHTML = `
+
+@keyframes scrollTrust {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hover effect */
+.trustScroll img:hover {
+  transform: translateY(-8px) scale(1.15);
+  box-shadow: 0 15px 40px rgba(244,196,48,0.5);
+}
+
+/* Pause animation on hover (premium feel) */
+.trustScroll:hover {
+  animation-play-state: paused;
+}
+
+/* Extra mobile spacing */
+@media(max-width:600px){
+  section {
+    border-radius:35px !important;
+    margin:30px 15px !important;
+    padding:60px 15px !important;
+  }
+}
+
+`;
+
+document.head.appendChild(trustResponsive);
 </script>
 
 </body>

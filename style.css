@@ -177,8 +177,8 @@ body{
 /* ===== BUTTON — 3D PILL ===== */
 
 .btn{
-  background:#0f766e;
-  color:white;
+  background:#ffc400c9;
+  color:rgb(0, 0, 0);
   border:none;
   padding:16px 34px;
   border-radius:999px;
@@ -186,7 +186,7 @@ body{
   cursor:pointer;
 
   box-shadow:
-    0 12px 0 #0b5e59,
+    0 12px 0 #ffa600d5,
     0 25px 50px rgba(0,0,0,0.18);
 
   transition:.25s;
@@ -254,7 +254,7 @@ body{
 /* RIGHT TEXT PANEL */
 
 .landmark-text{
-  background:#0f766e;
+  background:linear-gradient(90deg,#f59e0b,#f87133);
   color:white;
   padding:70px;
   display:flex;
@@ -267,7 +267,7 @@ body{
 
 .landmark-text::before{
   content:"";
-  background:#eab308;
+  background:linear-gradient(90deg,#f59e0b,#f87133);
   transform:skewX(-12deg);
 }
 
@@ -299,7 +299,7 @@ body{
 /* hover motion */
 
 .landmark-banner:hover .landmark-text{
-  background:#115e59;
+  background:linear-gradient(90deg,#f59e0b,#f87133);
 }
 
 
@@ -1190,3 +1190,7 @@ html, body{
   max-width:100%;
   overflow-x:hidden;
 }
+
+
+
+
