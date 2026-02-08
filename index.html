@@ -1,516 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="style.css">
-<title>Noshahi Developers Inc</title>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Noshahi Developers Inc</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="shape shape2"></div>
-<div class="shape shape3"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
 
-<!-- NAV -->
-<div class="nav">
-  
-  <div class="logo">
-    <img src="img/WhatsApp Image 2024-09-16 at 2.34.48 AM.jpeg" alt="Noshahi Developers">
+  <!-- NAV -->
+  <div class="nav">
+
+    <div class="logo">
+      <a href="index.html"><img src="img/ndi-logo.jpeg" alt="Noshahi Developers"></a>
+    </div>
+
+    <!-- TOGGLE BUTTON -->
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+    <!-- MENU -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
   </div>
 
-  <!-- TOGGLE BUTTON -->
-  <div class="menu-toggle" id="menuToggle">
-    ☰
-  </div>
+  <!-- ===== HERO SECTION ===== -->
 
-  <!-- MENU -->
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="project.html">Projects</a>
-    <a href="services.html">Services</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="#">Contact</a>
-  </div>
+  <section class="hero-3d">
 
-</div>
+    <div class="hero-left">
 
-<!-- ===== HERO SECTION ===== -->
+      <span class="tag">Noshahi Developers Inc</span>
 
-<section class="hero-3d">
+      <h1>
+        We Build <br>
+        Future Ready <br>
+        <span class="highlight">Spaces</span>
+      </h1>
 
-  <div class="hero-left">
+      <p>
+        Smart planning, premium construction and modern
+        development solutions for next-generation living.
+      </p>
 
-    <span class="tag">Noshahi Developers Inc</span>
+      <div class="hero-buttons">
+        <button class="btn-primary">View Projects</button>
+        <button class="btn-outline">Our Services</button>
+      </div>
 
-    <h1>
-      We Build <br>
-      Future Ready <br>
-      <span class="highlight">Spaces</span>
-    </h1>
+    </div>
 
-    <p>
-      Smart planning, premium construction and modern
-      development solutions for next-generation living.
+
+    <div class="hero-right">
+
+      <div class="circle-wrap">
+
+        <div class="circle-bg"></div>
+
+        <img src="img/hero-avatar.jpg" class="hero-person">
+
+        <div class="float-card card1">🏢 Smart Build</div>
+        <div class="float-card card2">📐 Planning</div>
+        <div class="float-card card3">🏗 Premium Quality</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="trusted-section">
+
+    <!-- TITLE -->
+    <p class="trusted-title">
+      Trusted By Industry Partners
+      <span class="trusted-divider"></span>
     </p>
 
-    <div class="hero-buttons">
-      <button class="btn-primary">View Projects</button>
-      <button class="btn-outline">Our Services</button>
-    </div>
+    <!-- LOGOS -->
+    <div class="trust-scroll-container">
 
-  </div>
+      <div class="trustScroll">
 
+        <img src="img/profile-1.jpg">
+        <img src="img/profile-2.jpg">
+        <img src="img/profile-3.jpg">
+        <img src="img/profile-4.jpg">
+        <img src="img/profile-5.jpg">
+        <!-- Duplicate for smooth loop -->
+        <img src="img/profile 1.jpg">
+        <img src="img/profile 2.jpg">
+        <img src="img/profile 3.jpg">
+        <img src="img/profile 4.jpg">
+        <img src="img/profile 5.jpg">
 
-  <div class="hero-right">
-
-    <div class="circle-wrap">
-
-      <div class="circle-bg"></div>
-
-      <img src="img/8bd42a4500a64fc9143d357289bf1b39.jpg" class="hero-person">
-
-      <div class="float-card card1">🏢 Smart Build</div>
-      <div class="float-card card2">📐 Planning</div>
-      <div class="float-card card3">🏗 Premium Quality</div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section style="
-background:linear-gradient(120deg,#fffaf0,#fff8e5);
-padding:80px 20px;
-text-align:center;
-overflow:hidden;
-position:relative;
-border-radius:60px;
-margin:40px 20px;
-">
-
-  <!-- TITLE -->
-  <p style="font-size:clamp(22px,4vw,32px); font-weight:700; color:#0f172a; margin-bottom:50px;">
-    Trusted By Industry Partners
-    
-    <span style="
-    display:block;
-    width:70px;
-    height:4px;
-    background:#f4c430;
-    border-radius:2px;
-    margin:15px auto 0;
-    box-shadow:0 0 10px rgba(244,196,48,0.5);
-    "></span>
-  </p>
-
-  <!-- LOGOS -->
-  <div style="width:100%; overflow:hidden;">
-
-    <div class="trustScroll" style="
-    display:flex;
-    gap:clamp(30px,6vw,80px);
-    align-items:center;
-    animation:scrollTrust 28s linear infinite;
-    ">
-
-      <img src="img/profile 1.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
-      <img src="img/profile 2.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
-      <img src="img/profile 3.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
-      <img src="img/profile 4.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
-      <img src="img/profile 5.jpg" style="height:clamp(40px,6vw,60px); transition:0.4s;">
-      <!-- Duplicate for smooth loop -->
-      <img src="img/profile 1.jpg" style="height:clamp(40px,6vw,60px);">
-      <img src="img/profile 2.jpg" style="height:clamp(40px,6vw,60px);">
-      <img src="img/profile 3.jpg" style="height:clamp(40px,6vw,60px);">
-      <img src="img/profile 4.jpg" style="height:clamp(40px,6vw,60px);">
-      <img src="img/profile 5.jpg" style="height:clamp(40px,6vw,60px);">
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ===== ORBIT PRO SERVICES ===== -->
-
-<section class="orbit-pro">
-
-  <h2 class="orbit-pro-title">Our Core Services</h2>
-
-  <div class="orbit-pro-wrap">
-
-    <!-- CENTER -->
-    <div class="orbit-core">
-      <div class="core-inner">
-        Noshahi<br>Developers
       </div>
+
     </div>
 
-    <!-- ITEMS -->
-
-    <div class="orbit-node n1">
-      <i class="fa-solid fa-ruler-combined"></i>
-      <span>Planning</span>
-      <div class="node-pop">Smart land & project planning solutions</div>
-    </div>
-
-    <div class="orbit-node n2">
-      <i class="fa-solid fa-building"></i>
-      <span>Construction</span>
-      <div class="node-pop">High quality modern construction</div>
-    </div>
-
-    <div class="orbit-node n3">
-      <i class="fa-solid fa-compass-drafting"></i>
-      <span>Architecture</span>
-      <div class="node-pop">Innovative structure design</div>
-    </div>
-
-    <div class="orbit-node n4">
-      <i class="fa-solid fa-chart-line"></i>
-      <span>Management</span>
-      <div class="node-pop">End-to-end project control</div>
-    </div>
-
-    <div class="orbit-node n5">
-      <i class="fa-solid fa-city"></i>
-      <span>Development</span>
-      <div class="node-pop">Urban & commercial development</div>
-    </div>
-
-    <div class="orbit-node n6">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <span>Consulting</span>
-      <div class="node-pop">Expert property consulting</div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- LANDMARK SPLIT BANNER -->
-
-<section class="landmark-banner">
-
-  <div class="landmark-img">
-    <img src="img/8bd42a4500a64fc9143d357289bf1b39.jpg">
-  </div>
-
-  <div class="landmark-text">
-    <span class="badge">Signature Work</span>
-    <h2>Delivering Landmark Projects</h2>
-    <p>We build high-impact developments using modern planning,
-       strong engineering and future-ready design systems.</p>
+  </section>
 
 
-       
-    <button class="btn">View Portfolio</button>
-  </div>
 
-</section>
+  <!-- ===== ORBIT PRO SERVICES ===== -->
 
-<!-- ===== PROJECT SHOWCASE ===== -->
+  <section class="orbit-pro">
 
-<section class="projects-pro">
+    <h2 class="orbit-pro-title">Our Core Services</h2>
 
-  <h2 class="projects-title">Featured Projects</h2>
+    <div class="orbit-container">
 
-  <div class="projects-wrap">
+      <!-- BACKGROUND -->
+      <div class="orbit-bg"></div>
 
-    <!-- CARD -->
-    <div class="proj-card">
-      <img src="img/Luxury Villas.jpg">
-
-      <div class="proj-overlay">
-        <h3>Luxury Villas</h3>
-        <p>Premium gated residential development</p>
-        <button>View Details</button>
-      </div>
-    </div>
-
-    <!-- CARD -->
-    <div class="proj-card">
-      <img src="img/Commercial Tower.jpg">
-
-      <div class="proj-overlay">
-        <h3>Commercial Tower</h3>
-        <p>Modern business complex</p>
-        <button>View Details</button>
-      </div>
-    </div>
-
-    <!-- CARD -->
-    <div class="proj-card">
-      <img src="img/Smart Housing.jpg">
-
-      <div class="proj-overlay">
-        <h3>Smart Housing</h3>
-        <p>Future-ready living spaces</p>
-        <button>View Details</button>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== IMPACT / STATS PRO ===== -->
-
-<section class="impact-pro">
-
-  <div class="impact-head">
-    <span class="impact-tag">Company Strength</span>
-    <h2>Delivering Results That Matter</h2>
-    <p>
-      Our development footprint reflects trust, scale and
-      long-term project excellence across multiple sectors.
-    </p>
-  </div>
-
-  <div class="impact-grid">
-
-    <!-- ITEM -->
-    <div class="impact-card">
-      <div class="impact-icon">
-        <i class="fa-solid fa-city"></i>
-      </div>
-      <div class="impact-number">120+</div>
-      <div class="impact-label">Completed Projects</div>
-    </div>
-
-    <!-- ITEM -->
-    <div class="impact-card">
-      <div class="impact-icon">
-        <i class="fa-solid fa-calendar-check"></i>
-      </div>
-      <div class="impact-number">15+</div>
-      <div class="impact-label">Years Experience</div>
-    </div>
-
-    <!-- ITEM -->
-    <div class="impact-card">
-      <div class="impact-icon">
-        <i class="fa-solid fa-users"></i>
-      </div>
-      <div class="impact-number">300+</div>
-      <div class="impact-label">Happy Clients</div>
-    </div>
-
-    <!-- ITEM -->
-    <div class="impact-card">
-      <div class="impact-icon">
-        <i class="fa-solid fa-building-circle-check"></i>
-      </div>
-      <div class="impact-number">25</div>
-      <div class="impact-label">Active Developments</div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-
-<section class="testimonials">
-
-  <h2 class="section-title">Client Success Stories</h2>
-
-  <div class="testi-wrapper">
-
-    <!-- CARD -->
-    <div class="testi-card">
-
-      <div class="testi-top">
-        <img src="img/Luxury Villas.jpg" class="client-img">
-        <div>
-          <h4>Ahmed Builders</h4>
-          <span>Luxury Villas Project</span>
+      <!-- STATIC CENTER -->
+      <div class="orbit-core">
+        <div class="core-inner">
+          <img src="img/ndi-logo.jpeg" alt="Noshahi Developers">
         </div>
       </div>
 
-      <p>
-        Noshahi Developers delivered beyond expectations.
-        Timeline perfect, finishing premium, and team highly professional.
-      </p>
+      <!-- SPINNING ITEMS -->
+      <div class="orbit-pro-wrap">
 
-      <div class="stars">★★★★★</div>
+        <div class="orbit-node n1">
+          <i class="fa-solid fa-ruler-combined"></i>
+          <span>Planning</span>
+          <div class="node-pop">Smart land & project planning solutions</div>
+        </div>
+
+        <div class="orbit-node n2">
+          <i class="fa-solid fa-building"></i>
+          <span>Construction</span>
+          <div class="node-pop">High quality modern construction</div>
+        </div>
+
+        <div class="orbit-node n3">
+          <i class="fa-solid fa-compass-drafting"></i>
+          <span>Architecture</span>
+          <div class="node-pop">Innovative structure design</div>
+        </div>
+
+        <div class="orbit-node n4">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Management</span>
+          <div class="node-pop">End-to-end project control</div>
+        </div>
+
+        <div class="orbit-node n5">
+          <i class="fa-solid fa-city"></i>
+          <span>Development</span>
+          <div class="node-pop">Urban & commercial development</div>
+        </div>
+
+        <div class="orbit-node n6">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Consulting</span>
+          <div class="node-pop">Expert property consulting</div>
+        </div>
+
+      </div>
 
     </div>
 
-    <!-- CARD -->
-    <div class="testi-card">
+  </section>
 
-      <div class="testi-top">
-        <img src="img/Commercial Tower.jpg" class="client-img">
-        <div>
-          <h4>Skyline Group</h4>
-          <span>Commercial Tower</span>
+  <!-- LANDMARK SPLIT BANNER -->
+
+  <section class="landmark-banner">
+
+    <div class="landmark-img">
+      <img src="img/hero-avatar.jpg">
+    </div>
+
+    <div class="landmark-text">
+      <span class="badge">Signature Work</span>
+      <h2>Delivering Landmark Projects</h2>
+      <p>We build high-impact developments using modern planning,
+        strong engineering and future-ready design systems.</p>
+
+
+
+      <button class="btn">View Portfolio</button>
+    </div>
+
+  </section>
+
+  <!-- ===== PROJECT SHOWCASE ===== -->
+
+  <section class="projects-pro">
+
+    <h2 class="projects-title">Featured Projects</h2>
+
+    <div class="projects-wrap">
+
+      <!-- CARD -->
+      <div class="proj-card">
+        <img src="img/luxury-villas.jpg">
+
+        <div class="proj-overlay">
+          <h3>Luxury Villas</h3>
+          <p>Premium gated residential development</p>
+          <button>View Details</button>
         </div>
       </div>
 
-      <p>
-        Smooth execution and transparent process.
-        Their project management is top tier.
-      </p>
+      <!-- CARD -->
+      <div class="proj-card">
+        <img src="img/commercial-tower.jpg">
 
-      <div class="stars">★★★★★</div>
-
-    </div>
-
-    <!-- CARD -->
-    <div class="testi-card">
-
-      <div class="testi-top">
-        <img src="img/Smart Housing.jpg" class="client-img">
-        <div>
-          <h4>Urban Holdings</h4>
-          <span>Housing Scheme</span>
+        <div class="proj-overlay">
+          <h3>Commercial Tower</h3>
+          <p>Modern business complex</p>
+          <button>View Details</button>
         </div>
       </div>
 
+      <!-- CARD -->
+      <div class="proj-card">
+        <img src="img/smart-housing.jpg">
+
+        <div class="proj-overlay">
+          <h3>Smart Housing</h3>
+          <p>Future-ready living spaces</p>
+          <button>View Details</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== IMPACT / STATS PRO ===== -->
+
+  <section class="impact-pro">
+
+    <div class="impact-head">
+      <span class="impact-tag">Company Strength</span>
+      <h2>Delivering Results That Matter</h2>
       <p>
-        From planning to delivery — outstanding quality.
-        Highly recommended development partner.
+        Our development footprint reflects trust, scale and
+        long-term project excellence across multiple sectors.
       </p>
-
-      <div class="stars">★★★★★</div>
-
     </div>
 
-  </div>
+    <div class="impact-grid">
 
-</section>
-
-<!-- ===== PREMIUM FOOTER ===== -->
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <!-- COMPANY -->
-    <div class="footer-col">
-      <h3 class="footer-logo">Noshahi Developers</h3>
-      <p>
-        Building future spaces with modern planning,
-        smart construction & trusted development solutions.
-      </p>
-
-      <div class="footer-badges">
-        <span>Govt Registered</span>
-        <span>ISO Certified</span>
-        <span>15+ Years Experience</span>
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-city"></i>
+        </div>
+        <div class="impact-number">120+</div>
+        <div class="impact-label">Completed Projects</div>
       </div>
-    </div>
 
-    <!-- QUICK LINKS -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <!-- SERVICES -->
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="#">Urban Planning</a>
-      <a href="#">Construction</a>
-      <a href="#">Architecture</a>
-      <a href="#">Project Management</a>
-      <a href="#">Consulting</a>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Gulbarg, Lahore</p>
-      <p>+92 307 5071297</p>
-      <p>noshahidevelopersinc@gmail.com</p>
-
-      <div class="socials">
-        <a href="#">FB</a>
-        <a href="#">IN</a>
-        <a href="#">LI</a>
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div class="impact-number">15+</div>
+        <div class="impact-label">Years Experience</div>
       </div>
-    </div>
 
-    <!-- NEWSLETTER -->
-    <div class="footer-col newsletter">
-      <h4>Project Updates</h4>
-      <p>Get new launch alerts & offers</p>
-
-      <div class="news-box">
-        <input type="email" placeholder="Enter email">
-        <button>Subscribe</button>
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <div class="impact-number">300+</div>
+        <div class="impact-label">Happy Clients</div>
       </div>
+
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-building-circle-check"></i>
+        </div>
+        <div class="impact-number">25</div>
+        <div class="impact-label">Active Developments</div>
+      </div>
+
     </div>
 
-  </div>
+  </section>
 
-  <!-- BOTTOM STRIP -->
-  <div class="footer-bottom">
-    © 2026 Noshahi Developers Inc., — All Rights Reserved
-  </div>
+  <!-- ===== TESTIMONIALS ===== -->
 
-</footer>
+  <section class="testimonials">
+
+    <h2 class="section-title">Client Success Stories</h2>
+
+    <div class="testi-wrapper">
+
+      <!-- CARD -->
+      <div class="testi-card">
+
+        <div class="testi-top">
+          <img src="img/luxury-villas.jpg" class="client-img">
+          <div>
+            <h4>Ahmed Builders</h4>
+            <span>Luxury Villas Project</span>
+          </div>
+        </div>
+
+        <p>
+          Noshahi Developers delivered beyond expectations.
+          Timeline perfect, finishing premium, and team highly professional.
+        </p>
+
+        <div class="stars">★★★★★</div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="testi-card">
+
+        <div class="testi-top">
+          <img src="img/commercial-tower.jpg" class="client-img">
+          <div>
+            <h4>Skyline Group</h4>
+            <span>Commercial Tower</span>
+          </div>
+        </div>
+
+        <p>
+          Smooth execution and transparent process.
+          Their project management is top tier.
+        </p>
+
+        <div class="stars">★★★★★</div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="testi-card">
+
+        <div class="testi-top">
+          <img src="img/smart-housing.jpg" class="client-img">
+          <div>
+            <h4>Urban Holdings</h4>
+            <span>Housing Scheme</span>
+          </div>
+        </div>
+
+        <p>
+          From planning to delivery — outstanding quality.
+          Highly recommended development partner.
+        </p>
+
+        <div class="stars">★★★★★</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===== PREMIUM FOOTER ===== -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- COMPANY -->
+      <div class="footer-col">
+        <h3 class="footer-logo">Noshahi Developers</h3>
+        <p>
+          Building future spaces with modern planning,
+          smart construction & trusted development solutions.
+        </p>
+
+        <div class="footer-badges">
+          <span>Govt Registered</span>
+          <span>ISO Certified</span>
+          <span>15+ Years Experience</span>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Urban Planning</a>
+        <a href="services.html">Construction</a>
+        <a href="services.html">Architecture</a>
+        <a href="services.html">Project Management</a>
+        <a href="services.html">Consulting</a>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Gulbarg, Lahore</p>
+        <p>+92 307 5071297</p>
+        <p>noshahidevelopersinc@gmail.com</p>
+
+        <div class="socials">
+          <a href="#">FB</a>
+          <a href="#">IN</a>
+          <a href="#">LI</a>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="footer-col newsletter">
+        <h4>Project Updates</h4>
+        <p>Get new launch alerts & offers</p>
+
+        <div class="news-box">
+          <input type="email" placeholder="Enter email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM STRIP -->
+    <div class="footer-bottom">
+      © 2026 Noshahi Developers Inc., — All Rights Reserved
+    </div>
+
+  </footer>
 
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({duration:1200, once:true});
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("navLinks");
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
 
-toggle.onclick = () => {
-  nav.classList.toggle("show");
+    toggle.onclick = () => {
+      nav.classList.toggle("show");
 
-  if(nav.classList.contains("show")){
-    toggle.innerHTML = "✖";   // cancel icon
-  } else {
-    toggle.innerHTML = "☰";   // hamburger
-  }
-};
-const trustResponsive = document.createElement("style");
+      if (nav.classList.contains("show")) {
+        toggle.innerHTML = "✖";   // cancel icon
+      } else {
+        toggle.innerHTML = "☰";   // hamburger
+      }
+    };
 
-trustResponsive.innerHTML = `
-
-@keyframes scrollTrust {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Hover effect */
-.trustScroll img:hover {
-  transform: translateY(-8px) scale(1.15);
-  box-shadow: 0 15px 40px rgba(244,196,48,0.5);
-}
-
-/* Pause animation on hover (premium feel) */
-.trustScroll:hover {
-  animation-play-state: paused;
-}
-
-/* Extra mobile spacing */
-@media(max-width:600px){
-  section {
-    border-radius:35px !important;
-    margin:30px 15px !important;
-    padding:60px 15px !important;
-  }
-}
-
-`;
-
-document.head.appendChild(trustResponsive);
-</script>
+  </script>
 
 </body>
+
 </html>
