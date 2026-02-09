@@ -12,6 +12,7 @@
   min-height: 90vh;
   background: #ffffff;
   overflow: hidden;
+  position: relative;
 }
 
 /* LEFT */
@@ -480,6 +481,7 @@
   padding: 140px 0;
   background: #ffffff;
   text-align: center;
+  overflow: hidden;
 }
 
 .orbit-pro-title {

@@ -11,6 +11,7 @@ body {
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
   color: #0b1324;
   overflow-x: hidden;
+  width: 100%;
   line-height: 1.6;
 }
 
