@@ -15,8 +15,16 @@ body {
   line-height: 1.6;
 }
 
-img {
+html {
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -466,5 +474,49 @@ h6 {
 
   to {
     transform: translate(30px, 40px);
+  }
+}
+
+/* ===== GLOBAL MOBILE SAFETY FIXES (320px Viewport) ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+  }
+
+  p,
+  span,
+  li,
+  a {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .tag {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+
+  /* Container safety */
+  section,
+  footer {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .nav {
+    width: 94% !important;
+    padding: 12px 15px !important;
+    margin: 20px auto !important;
   }
 }

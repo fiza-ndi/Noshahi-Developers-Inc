@@ -1,6 +1,8 @@
 /* ===== ABOUT HERO ===== */
 .hero-3d-about {
   display: flex;
+  flex-wrap: wrap;
+  /* Added for responsiveness */
   align-items: center;
   justify-content: space-between;
   padding: 80px 8%;
@@ -290,12 +292,15 @@
   background: #fefefe;
   border-radius: 12px;
   flex: 1;
-  min-width: 250px;
+  min-width: 240px;
+  /* Safer for 320px screens */
   max-width: 300px;
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  margin: 0 auto;
+  /* Keep centered in flex container */
 }
 
 .impact-card:hover {
@@ -338,9 +343,12 @@
 
 .proj-card {
   position: relative;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   overflow: hidden;
   border-radius: 12px;
+  margin: 0 auto 30px auto;
+  /* Added for centering and spacing */
 }
 
 .proj-card img {
@@ -441,8 +449,10 @@
 /* CLUSTER WRAP */
 .cluster-wrap {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   margin: auto;
   animation: rotateCircle 25s linear infinite;
   z-index: 1;
@@ -906,7 +916,7 @@
 
 /* Gold Button */
 .btn-gold {
-  padding: 18px 45px;
+  padding: 15px 5px;
   background: #f4c430;
   color: #0b1324;
   font-size: 16px;

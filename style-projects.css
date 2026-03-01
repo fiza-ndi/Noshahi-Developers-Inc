@@ -35,7 +35,8 @@ p {
 /* LEFT CONTENT */
 .hero-left {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
+  /* Reduced for 320px safety */
 }
 
 .hero-left .tag {
@@ -97,7 +98,8 @@ p {
 /* RIGHT HERO / IMAGE + FLOAT CARDS */
 .hero-right {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
+  /* Reduced for 320px safety */
   position: relative;
   display: flex;
   justify-content: center;
@@ -106,8 +108,10 @@ p {
 
 .circle-wrap {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .circle-bg {
@@ -194,8 +198,8 @@ p {
   }
 
   .circle-wrap {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
   }
 
   .hero-project {
@@ -233,7 +237,8 @@ p {
 .feature-card-modern {
   background: linear-gradient(145deg, #fff7e0, #ffffff);
   border-radius: 25px;
-  width: 280px;
+  width: 100%;
+  max-width: 280px;
   padding: 40px 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -617,7 +622,7 @@ p {
 
 .tech-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 35px;
 }
 
@@ -700,7 +705,7 @@ p {
 
 .tech-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 35px;
 }
 
@@ -740,7 +745,8 @@ p {
 
 .testimonial-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Standardized to 250px */
   gap: 40px;
 }
 
@@ -1005,7 +1011,8 @@ p {
 /* ===== HERO LEFT CONTENT ===== */
 .hero-left {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
+  /* Reduced for 320px safety */
 }
 
 .hero-left .tag {
@@ -1067,7 +1074,7 @@ p {
 /* ===== HERO RIGHT / CIRCULAR IMAGE ===== */
 .hero-right {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1077,17 +1084,17 @@ p {
 /* CIRCLE WRAP */
 .circle-wrap {
   position: relative;
-  width: 300px;
-  /* Circle container width */
-  height: 300px;
-  /* Circle container height */
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
 }
 
 /* CIRCULAR IMAGE WITH BORDER */
 .circle-border {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 5px solid #f4c430;
   /* Border around circle */
@@ -1142,7 +1149,8 @@ p {
 }
 
 .hero-img img {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 25px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
   animation: floatWave 5s ease-in-out infinite;
@@ -1162,7 +1170,8 @@ p {
 
 .hero-content {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
+  /* Safety for 320px */
 }
 
 .hero-content .tagline {
@@ -1549,8 +1558,9 @@ CTA SECTION
 
 /* Shape 1 */
 .hero-wave::before {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
   background: rgba(244, 196, 48, 0.08);
   /* Transparent Yellow */
   top: -50px;
@@ -1560,8 +1570,9 @@ CTA SECTION
 
 /* Shape 2 */
 .hero-wave::after {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
   background: rgba(15, 23, 42, 0.05);
   /* Transparent Dark */
   bottom: -50px;

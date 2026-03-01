@@ -6,6 +6,8 @@
 
 .hero-3d {
   display: flex;
+  flex-wrap: wrap;
+  /* Added for responsiveness */
   align-items: center;
   justify-content: space-between;
   padding: 80px 8%;
@@ -107,8 +109,10 @@
 
 .circle-wrap {
   position: relative;
-  width: 460px;
-  height: 460px;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 /* GOLD RING */
@@ -132,12 +136,14 @@
 
 .hero-person {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 82.6%;
+  /* (380/460) */
+  height: 82.6%;
   object-fit: cover;
   border-radius: 50%;
-  top: 40px;
-  left: 40px;
+  top: 8.7%;
+  /* (40/460) */
+  left: 8.7%;
   z-index: 2;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 }
@@ -494,10 +500,10 @@
 
 .orbit-container {
   position: relative;
-  width: 560px;
-  height: 560px;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
   margin: auto;
-  /* border-radius: 50%; remove this if not needed for container */
 }
 
 /* BACKGROUND BLOB */
@@ -696,8 +702,11 @@
 
 .projects-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Safer for mobile */
   gap: 40px;
+  justify-content: center;
+  justify-items: center;
 }
 
 /* CARD */
@@ -711,6 +720,10 @@
   transform-style: preserve-3d;
   transition: .5s;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  /* Centering safety */
 }
 
 .proj-card:hover {
@@ -813,8 +826,11 @@
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 36px;
+  justify-content: center;
+  justify-items: center;
+  /* Center cards within their grid cells */
 }
 
 /* CARD */
@@ -828,6 +844,10 @@
   transition: .4s;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  /* Constrain size for better centering */
+  margin: 0 auto;
 }
 
 .impact-card::after {
@@ -936,7 +956,8 @@
 .testi-wrapper {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Standardized to 250px */
   gap: 36px;
 }
 
@@ -1035,7 +1056,8 @@
   }
 
   .circle-wrap {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
   }
 
 }
@@ -1091,11 +1113,19 @@
   }
 
   .circle-wrap {
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
   }
 
   .float-card {
     transform: scale(.85);
+  }
+
+  .hero-person {
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
   }
 
 }
@@ -1108,8 +1138,10 @@
 @media (max-width: 1024px) {
 
   .orbit-pro-wrap {
-    width: 460px;
-    height: 460px;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .orbit-node {
@@ -1140,8 +1172,10 @@
   }
 
   .orbit-pro-wrap {
-    width: 360px;
-    height: 360px;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .orbit-node {
@@ -1166,33 +1200,87 @@
 
 @media (max-width: 480px) {
 
+  .orbit-container {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    /* Reduced from 280px to safely fit 320px screens with padding */
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+
   .orbit-pro-wrap {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
 
   .orbit-node {
-    width: 92px;
-    padding: 10px 6px;
+    width: 80px;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .orbit-node span {
-    font-size: 11px;
+    font-size: 10px;
+    display: block;
+    line-height: 1.2;
   }
 
   .orbit-node i {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  /* Adjust positioning to prevent cutoff */
+  .n1 {
+    top: -15px;
+  }
+
+  .n4 {
+    bottom: -15px;
+  }
+
+  .n2 {
+    top: 15%;
+    right: -15px;
+  }
+
+  .n3 {
+    bottom: 15%;
+    right: -15px;
+  }
+
+  .n5 {
+    bottom: 15%;
+    left: -15px;
+  }
+
+  .n6 {
+    top: 15%;
+    left: -15px;
+  }
+
+  .n1,
+  .n4 {
+    transform: translateX(-50%);
   }
 
   .core-inner {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     font-size: 12px;
+  }
+
+  .core-inner img {
+    padding: 10px;
   }
 
   .node-pop {
     display: none;
-    /* popup mobile par overlap se bachaega */
   }
 
 }

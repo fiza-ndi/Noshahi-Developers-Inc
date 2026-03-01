@@ -131,11 +131,13 @@
 /* BLOG HERO */
 .blog-hero {
     display: flex;
+    flex-wrap: wrap;
+    /* Ensure image and text wrap */
     align-items: center;
     justify-content: space-between;
     padding: 100px 8%;
     background: #ffffff;
-    gap: 60px;
+    gap: 40px;
     min-height: 80vh;
 }
 
@@ -256,7 +258,8 @@
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Standardized to 250px */
     gap: 40px;
     margin-bottom: 60px;
 }
@@ -715,6 +718,8 @@
     font-weight: 600;
     color: #64748b;
     margin-bottom: 8px;
+    word-break: break-all;
+    /* Prevent label overflow if long */
 }
 
 .form-group input,
@@ -774,7 +779,7 @@
 @media (max-width: 900px) {
     .contact-wrapper {
         flex-direction: column;
-        margin: -50px 20px 50px;
+        margin: -50px 5% 50px;
         /* Adjust overlap */
     }
 
