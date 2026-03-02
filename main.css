@@ -10,13 +10,15 @@ body {
   font-family: "Poppins", Arial, sans-serif;
   background: linear-gradient(180deg, #ffffff, #f1f5f9);
   color: #0b1324;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   width: 100%;
   line-height: 1.6;
+  position: relative;
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  width: 100%;
 }
 
 img,
@@ -101,12 +103,12 @@ h6 {
 
 .shape2 {
   top: 200px;
-  left: 80px
+  left: 0;
 }
 
 .shape3 {
   top: 600px;
-  right: 120px
+  right: 0;
 }
 
 @keyframes float {
