@@ -31,7 +31,8 @@
 
     <!-- MENU -->
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
+      <div id="closeMenu">✖</div>
+      <a href="index.html" class="active">Home</a>
       <a href="project.html">Projects</a>
       <a href="services.html">Services</a>
       <a href="blog.html">Blog</a>
@@ -87,34 +88,38 @@
 
   </section>
   <section class="trusted-section">
+    <!-- SOFT CLOUD DECORATIONS -->
+    <div class="cloud-blob blob-1"></div>
+    <div class="cloud-blob blob-2"></div>
+    <div class="cloud-blob blob-3"></div>
 
-    <!-- TITLE -->
-    <p class="trusted-title">
-      Trusted By Industry Partners
-      <span class="trusted-divider"></span>
-    </p>
-
-    <!-- LOGOS -->
-    <div class="trust-scroll-container">
-
-      <div class="trustScroll">
-
-        <img src="img/profile-1.jpg">
-        <img src="img/profile-2.jpg">
-        <img src="img/profile-3.jpg">
-        <img src="img/profile-4.jpg">
-        <img src="img/profile-5.jpg">
-        <!-- Duplicate for smooth loop -->
-        <img src="img/profile 1.jpg">
-        <img src="img/profile 2.jpg">
-        <img src="img/profile 3.jpg">
-        <img src="img/profile 4.jpg">
-        <img src="img/profile 5.jpg">
-
+    <div class="trusted-content">
+      <!-- TITLE -->
+      <div class="soft-title-wrap">
+        <span class="sub-tag">Industry Excellence</span>
+        <h2 class="trusted-title-main">Trusted By Global Partners</h2>
+        <div class="soft-line"></div>
       </div>
 
-    </div>
+      <!-- LOGOS HUB -->
+      <div class="trust-cloud-container">
+        <div class="trustCloud">
+          <!-- Logo Cards -->
+          <div class="glass-card-soft"><img src="img/partner-1-soft.png" alt="Apex"></div>
+          <div class="glass-card-soft"><img src="img/partner-2.png" alt="Nova" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-3.png" alt="Elysian" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-4.png" alt="Zenith" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-5.png" alt="Titan" class="soften"></div>
 
+          <!-- Duplicate for seamless scroll if needed, or static grid -->
+          <div class="glass-card-soft"><img src="img/partner-1-soft.png" alt="Apex"></div>
+          <div class="glass-card-soft"><img src="img/partner-2.png" alt="Nova" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-3.png" alt="Elysian" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-4.png" alt="Zenith" class="soften"></div>
+          <div class="glass-card-soft"><img src="img/partner-5.png" alt="Titan" class="soften"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
@@ -299,6 +304,24 @@
         <div class="impact-label">Active Developments</div>
       </div>
 
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-compass-drafting"></i>
+        </div>
+        <div class="impact-number">50+</div>
+        <div class="impact-label">Expert Architects</div>
+      </div>
+
+      <!-- ITEM -->
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div class="impact-number">100%</div>
+        <div class="impact-label">Quality Assurance</div>
+      </div>
+
     </div>
 
   </section>
@@ -373,6 +396,55 @@
 
     </div>
 
+  </section>
+
+  <!-- ===== PREMIUM CAMPUS LOCATIONS ===== -->
+  <section class="section-locations" id="locations">
+    <div class="container">
+      <div class="header-stack" data-aos="fade-up">
+        <div class="pill-tag-header">Noshahi Developers Inc</div>
+        <h2 class="modern-title-stack">We Build Future Ready <span class="highlight-yellow">Branches</span></h2>
+        <p>Experience our workspace and discuss your future projects in person.</p>
+      </div>
+
+      <div class="location-grid">
+        <!-- Lahore Branch -->
+        <div class="location-card premium-card" data-aos="zoom-in-right" data-aos-delay="100">
+          <div class="loc-bg-img"
+            style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200');">
+          </div>
+          <div class="loc-glass-box">
+            <div class="loc-icon-glow"><i class="fas fa-city"></i></div>
+            <div class="loc-details">
+              <span class="loc-badge">Strategic Hub</span>
+              <h3>Lahore Branch</h3>
+              <p class="loc-address"><i class="fas fa-map-marker-alt"></i> Thokar Niaz Baig, Lahore</p>
+              <a href="https://maps.google.com/?q=Thokar+Niaz+Baig+Lahore" target="_blank" class="btn-map-premium">
+                Explore Location <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gogra Branch -->
+        <div class="location-card premium-card" data-aos="zoom-in-left" data-aos-delay="200">
+          <div class="loc-bg-img"
+            style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
+          </div>
+          <div class="loc-glass-box">
+            <div class="loc-icon-glow"><i class="fas fa-landmark"></i></div>
+            <div class="loc-details">
+              <span class="loc-badge">Headquarters</span>
+              <h3>Main Branch (Gogra)</h3>
+              <p class="loc-address"><i class="fas fa-map-marker-alt"></i> Al-Habib City, Gogra</p>
+              <a href="https://maps.google.com/?q=Al-Habib+City+Gogra" target="_blank" class="btn-map-premium">
+                Explore Location <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== PREMIUM FOOTER ===== -->
@@ -452,22 +524,21 @@
 
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="global.js"></script>
   <script>
     AOS.init({ duration: 1200, once: true });
-    const toggle = document.getElementById("menuToggle");
-    const nav = document.getElementById("navLinks");
-
-    toggle.onclick = () => {
-      nav.classList.toggle("show");
-
-      if (nav.classList.contains("show")) {
-        toggle.innerHTML = "✖";   // cancel icon
-      } else {
-        toggle.innerHTML = "☰";   // hamburger
-      }
-    };
 
   </script>
+
+  <!-- FLOATING ACTIONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/923075071297" target="_blank" class="fab fab-whatsapp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="backToTop" class="fab fab-back-to-top" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
 
 </body>
 

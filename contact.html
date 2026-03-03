@@ -28,13 +28,14 @@
         <div class="menu-toggle" id="menuToggle">☰</div>
 
         <div class="nav-links" id="navLinks">
+            <div id="closeMenu">✖</div>
             <a href="index.html">Home</a>
             <a href="project.html">Projects</a>
             <a href="services.html">Services</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </div>
 
     </div>
@@ -121,6 +122,56 @@
 
     </section>
 
+    <!-- ===== PREMIUM CAMPUS LOCATIONS ===== -->
+    <section class="section-locations-contact">
+        <div class="container">
+            <div class="header-stack" data-aos="fade-up">
+                <div class="pill-tag-header">Noshahi Developers Inc</div>
+                <h2 class="modern-title-stack" style="color: rgb(255, 183, 0);">We Build Future Ready <span class="highlight-yellow">Branches</span></h2>
+                <p>Experience our workspace and discuss your future projects in person.</p>
+            </div>
+            <div class="location-grid">
+                <!-- Lahore Branch -->
+                <div class="location-card premium-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="loc-bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200');">
+                    </div>
+                    <div class="loc-glass-box">
+                        <div class="loc-icon-glow"><i class="fas fa-city"></i></div>
+                        <div class="loc-details">
+                            <span class="loc-badge">Strategic Hub</span>
+                            <h3>Lahore Branch</h3>
+                            <p class="loc-address"><i class="fas fa-map-marker-alt"></i> Thokar Niaz Baig, Lahore</p>
+                            <a href="https://maps.google.com/?q=Thokar+Niaz+Baig+Lahore" target="_blank"
+                                class="btn-map-premium">
+                                Explore Location <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gogra Branch -->
+                <div class="location-card premium-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="loc-bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
+                    </div>
+                    <div class="loc-glass-box">
+                        <div class="loc-icon-glow"><i class="fas fa-landmark"></i></div>
+                        <div class="loc-details">
+                            <span class="loc-badge">Headquarters</span>
+                            <h3>Main Branch (Gogra)</h3>
+                            <p class="loc-address"><i class="fas fa-map-marker-alt"></i> Al-Habib City, Gogra</p>
+                            <a href="https://maps.google.com/?q=Al-Habib+City+Gogra" target="_blank"
+                                class="btn-map-premium">
+                                Explore Location <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
 
@@ -185,19 +236,20 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="global.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
-        const toggle = document.getElementById("menuToggle");
-        const nav = document.getElementById("navLinks");
-        toggle.onclick = () => {
-            nav.classList.toggle("show");
-            if (nav.classList.contains("show")) {
-                toggle.innerHTML = "✖";
-            } else {
-                toggle.innerHTML = "☰";
-            }
-        };
     </script>
+    <!-- FLOATING ACTIONS -->
+    <div class="floating-actions">
+        <a href="https://wa.me/923075071297" target="_blank" class="fab fab-whatsapp" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button id="backToTop" class="fab fab-back-to-top" title="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
 </body>
 
 </html>

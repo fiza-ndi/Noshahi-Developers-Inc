@@ -32,11 +32,12 @@
 
     <!-- MENU -->
     <div class="nav-links" id="navLinks">
+      <div id="closeMenu">✖</div>
       <a href="index.html">Home</a>
       <a href="project.html">Projects</a>
       <a href="services.html">Services</a>
       <a href="blog.html">Blog</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -375,20 +376,9 @@
 
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="global.js"></script>
   <script>
     AOS.init({ duration: 1200, once: true });
-    const toggle = document.getElementById("menuToggle");
-    const nav = document.getElementById("navLinks");
-
-    toggle.onclick = () => {
-      nav.classList.toggle("show");
-
-      if (nav.classList.contains("show")) {
-        toggle.innerHTML = "✖";   // cancel icon
-      } else {
-        toggle.innerHTML = "☰";   // hamburger
-      }
-    };
     const track = document.querySelector(".slider-container");
 
     setInterval(() => {
@@ -419,6 +409,16 @@
     });
 
   </script>
+
+  <!-- FLOATING ACTIONS -->
+  <div class="floating-actions">
+    <a href="https://wa.me/923075071297" target="_blank" class="fab fab-whatsapp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button id="backToTop" class="fab fab-back-to-top" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
 
 </body>
 
