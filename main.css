@@ -50,7 +50,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 8%;
+  padding: clamp(15px, 3vh, 20px) 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,12 +58,11 @@ h6 {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.02);
-  /* Near invisible border */
 }
 
 /* Glass state on scroll */
 .nav.glassy {
-  padding: 15px 8%;
+  padding: clamp(10px, 2vh, 15px) 5%;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -72,13 +71,17 @@ h6 {
 }
 
 .logo img {
-  height: 50px;
+  height: clamp(40px, 5vh, 50px);
   width: auto;
   transition: 0.3s;
+  mix-blend-mode: multiply;
+  /* Removes white background from JPEG */
+  filter: contrast(1.1);
+  /* Enhance logo clarity after blend */
 }
 
 .nav.glassy .logo img {
-  height: 42px;
+  height: clamp(35px, 4vh, 42px);
 }
 
 .nav-links {
@@ -176,162 +179,202 @@ h6 {
 
 /* ===== FOOTER — NAVBAR MATCH STYLE ===== */
 
+/* ===== PREMIUM FOOTER — DARK THEME ===== */
+
 .footer {
-  margin-top: 120px;
+  margin-top: clamp(80px, 15vh, 140px);
+  background: #010816;
+  /* Deep Navy Dark */
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* main container same floating strip like nav */
+/* Subtle glow at the top of footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+  opacity: 0.3;
+}
 
 .footer-container {
   width: 90%;
+  max-width: 1400px;
   margin: auto;
-  padding: 60px 40px;
-  border-radius: 18px;
-  background: white;
+  padding: clamp(60px, 10vw, 100px) 5% clamp(40px, 8vw, 60px);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1.2fr;
+  gap: clamp(30px, 5vw, 50px);
 }
 
 /* headings */
-
 .footer-col h4 {
-  margin-bottom: 16px;
-  color: #f59e0b;
-  font-size: 18px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: 700;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  /* slightly wider */
+  height: 3px;
+  /* slightly thicker */
+  background: #f59e0b;
 }
 
 /* logo */
-
 .footer-logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: .5px;
+  font-size: 26px;
+  font-weight: 900;
   color: #f59e0b;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-transform: none;
 }
 
 /* text */
-
 .footer-col p {
-  color: #475569;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  color: #94a3b8;
+  /* Slate light */
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
 /* links */
-
 .footer-col a {
   display: block;
-  color: #334155;
+  color: #cbd5e1;
   text-decoration: none;
-  margin-bottom: 10px;
-  font-weight: 600;
-  position: relative;
+  margin-bottom: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 15px;
 }
 
-/* same underline hover as navbar */
-
-.footer-col a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: #f59e0b;
-  transition: .3s;
-}
-
-.footer-col a:hover::after {
-  width: 100%;
+.footer-col a:hover {
+  color: #f59e0b;
+  transform: translateX(5px);
 }
 
 /* badges */
+.footer-badges {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 
 .footer-badges span {
-  display: inline-block;
-  background: #ecfeff;
+  background: rgba(245, 158, 11, 0.1);
   color: #f59e0b;
-  padding: 6px 10px;
-  border-radius: 8px;
-  margin: 4px 4px 0 0;
-  font-size: 12px;
-  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 /* socials */
-
 .socials {
-  margin-top: 12px;
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
 }
 
 .socials a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #f1f5f9;
+  display: flex !important;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  margin-right: 8px;
-  font-weight: 700;
-  color: #f59e0b;
-  transition: .25s;
+  margin: 0 !important;
+  color: #ffffff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .socials a:hover {
   background: #f59e0b;
-  color: white;
-  transform: translateY(-4px);
+  color: #010816;
+  border-color: #f59e0b;
+  transform: translateY(-5px) rotate(8deg);
 }
 
 /* newsletter */
+.newsletter p {
+  font-size: 14px;
+  font-style: italic;
+}
 
 .news-box {
   display: flex;
-  margin-top: 12px;
+  margin-top: 20px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 5px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .news-box input {
   flex: 1;
-  padding: 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px 0 0 12px;
+  background: transparent;
+  padding: 12px 15px;
+  border: none;
+  color: #fff;
   outline: none;
+  font-size: 14px;
 }
 
 .news-box button {
-  padding: 12px 18px;
+  padding: 10px 24px;
   border: none;
   background: #f59e0b;
-  color: white;
-  font-weight: 700;
-  border-radius: 0 12px 12px 0;
+  color: #010816;
+  font-weight: 800;
+  border-radius: 10px;
   cursor: pointer;
-  transition: .25s;
+  transition: all 0.3s ease;
 }
 
 .news-box button:hover {
-  transform: translateY(-2px);
+  background: #fbbf24;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
 }
 
-/* ===== BOTTOM STRIP — DIFFERENT COLOR ===== */
+/* ===== BOTTOM STRIP ===== */
 
 .footer-bottom {
   width: 90%;
-  margin: 18px auto 40px;
+  max-width: 1400px;
+  margin: 20px auto 40px;
+  padding: 24px;
+  border-radius: 20px;
   background: #f59e0b;
-  color: white;
-  padding: 18px;
-  border-radius: 14px;
+  /* BRAND YELLOW */
+  color: #010816;
+  /* DARK TEXT FOR CONTRAST */
   text-align: center;
-  font-weight: 600;
-
-  box-shadow: 0 12px 30px rgba(15, 118, 110, .25);
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
 }
 
 
@@ -402,11 +445,13 @@ h6 {
 /* Header Stack Styling */
 .header-stack {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  /* Reduced from 50px */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  /* Reduced from 15px */
 }
 
 .pill-tag-header {
@@ -423,7 +468,8 @@ h6 {
 }
 
 .modern-title-stack {
-  font-size: 52px;
+  font-size: clamp(28px, 6vw, 42px);
+  /* Reduced from 32px-8vw-52px */
   font-weight: 900;
   color: var(--navy-dark);
   line-height: 1.1;
@@ -454,7 +500,8 @@ h6 {
 }
 
 .section-locations {
-  padding: 120px 0;
+  padding: clamp(40px, 8vh, 80px) 0;
+  /* Reduced from 120px 0 */
   background: var(--bg-soft);
   position: relative;
 }
@@ -463,7 +510,8 @@ h6 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 40px;
-  margin-top: 60px;
+  margin-top: 40px;
+  /* Reduced from 60px */
 }
 
 .location-card.premium-card {

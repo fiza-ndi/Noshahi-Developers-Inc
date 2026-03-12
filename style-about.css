@@ -5,8 +5,8 @@
   /* Added for responsiveness */
   align-items: center;
   justify-content: space-between;
-  padding: 80px 8%;
-  min-height: 90vh;
+  padding: clamp(80px, 15vh, 120px) 5%;
+  min-height: 85vh;
   background: linear-gradient(135deg, #f0f2f5, #ffffff);
   overflow: hidden;
   position: relative;
@@ -34,7 +34,7 @@
 }
 
 .hero-left-about h1 {
-  font-size: 52px;
+  font-size: clamp(34px, 6vw, 52px);
   line-height: 1.1;
   margin-bottom: 20px;
   color: #0f172a;
@@ -59,7 +59,7 @@
 
 .hero-left-about p {
   color: #475569;
-  font-size: 18px;
+  font-size: clamp(16px, 2.5vw, 18px);
   margin-bottom: 30px;
   line-height: 1.6;
 }
@@ -145,8 +145,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 8%;
-  gap: 50px;
+  padding: clamp(60px, 10vh, 100px) 5%;
+  gap: clamp(30px, 5vw, 50px);
   background: linear-gradient(135deg, #fefefe, #f9fafb);
   border-radius: 20px;
   position: relative;
@@ -189,10 +189,10 @@
 }
 
 .story-left p {
-  font-size: 18px;
+  font-size: clamp(16px, 2.5vw, 18px);
   color: #475569;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 4vw, 30px);
 }
 
 .story-btn {
@@ -593,31 +593,61 @@
 
 /* RESPONSIVE */
 @media screen and (max-width: 500px) {
-  .cluster-wrap {
-    width: 300px;
-    height: 300px;
+  .orbit-cluster {
+    padding: 60px 10px;
   }
 
+  .cluster-wrap {
+    width: 260px;
+    height: 260px;
+  }
+
+  /* Reduce Radius for ultra-small screens */
   .cluster-node {
-    width: 80px;
-    height: 80px;
-    font-size: 12px;
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+  }
+
+  .cluster-node:nth-child(2) {
+    transform: translate(0, -110px);
+  }
+
+  .cluster-node:nth-child(3) {
+    transform: translate(95px, -55px);
+  }
+
+  .cluster-node:nth-child(4) {
+    transform: translate(95px, 55px);
+  }
+
+  .cluster-node:nth-child(5) {
+    transform: translate(0, 110px);
+  }
+
+  .cluster-node:nth-child(6) {
+    transform: translate(-95px, 55px);
+  }
+
+  .cluster-node:nth-child(7) {
+    transform: translate(-95px, -55px);
   }
 
   .cluster-center {
-    width: 90px;
-    height: 90px;
-    font-size: 14px;
+    width: 80px;
+    height: 80px;
+    font-size: 13px;
   }
 
   .cluster-title {
-    font-size: 28px;
+    font-size: clamp(24px, 5vw, 28px);
+    margin-bottom: 40px;
   }
 }
 
 /* ===== TEAM PREVIEW UPDATED BACKGROUND ===== */
 .leader-flip-section {
-  padding: 120px 8%;
+  padding: clamp(60px, 12vh, 120px) 5%;
   background: #ffffff;
   /* White background */
   position: relative;
@@ -699,8 +729,8 @@
   position: relative;
   z-index: 2;
   color: #0f172a;
-  font-size: 42px;
-  margin-bottom: 70px;
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: clamp(40px, 8vw, 70px);
 }
 
 /* Flip Cards remain same */

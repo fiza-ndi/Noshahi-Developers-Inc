@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 8%;
-    min-height: 90vh;
+    padding: clamp(60px, 12vh, 100px) 5%;
+    min-height: 85vh;
     background: #ffffff;
     overflow: hidden;
 }
@@ -29,7 +29,7 @@
 }
 
 .hero-left h1 {
-    font-size: 56px;
+    font-size: clamp(32px, 6vw, 56px);
     line-height: 1.1;
     margin-bottom: 20px;
     color: #0f172a;
@@ -57,7 +57,7 @@
 
 /* ===== CONTACT FORM SECTION ===== */
 .contact-section {
-    padding: 100px 8%;
+    padding: clamp(60px, 10vh, 100px) 5%;
     background: linear-gradient(180deg, #ffffff, #f1f5f9);
 }
 
@@ -65,7 +65,7 @@
     max-width: 800px;
     margin: 0 auto;
     background: #ffffff;
-    padding: 50px;
+    padding: clamp(30px, 5vw, 50px);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -135,9 +135,9 @@
     /* Ensure image and text wrap */
     align-items: center;
     justify-content: space-between;
-    padding: 100px 8%;
+    padding: clamp(60px, 12vh, 100px) 5%;
     background: #ffffff;
-    gap: 40px;
+    gap: clamp(20px, 4vw, 40px);
     min-height: 80vh;
 }
 
@@ -177,7 +177,7 @@
 }
 
 .blog-hero-container h1 {
-    font-size: 52px;
+    font-size: clamp(32px, 6vw, 52px);
     line-height: 1.1;
     color: #0f172a;
     margin-bottom: 20px;
@@ -252,7 +252,7 @@
 
 /* LISTING */
 .blog-listing {
-    padding: 80px 8%;
+    padding: clamp(40px, 8vh, 80px) 5%;
     background: #f8fafc;
 }
 
@@ -315,7 +315,7 @@
 
 /* CONTENT */
 .blog-content {
-    padding: 30px;
+    padding: clamp(20px, 4vw, 30px);
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -418,7 +418,7 @@
 
 /* NEWSLETTER */
 .blog-subscribe {
-    padding: 100px 8%;
+    padding: clamp(60px, 10vh, 100px) 5%;
     background: #0f172a;
     text-align: center;
     color: #fff;
@@ -515,7 +515,7 @@
 /* HERO (Centered) */
 .contact-hero {
     text-align: center;
-    padding: 120px 8% 180px;
+    padding: clamp(100px, 15vh, 120px) 5% clamp(140px, 18vh, 180px);
     /* Extra bottom padding for overlap */
     background: #f8fafc;
     position: relative;
@@ -544,7 +544,7 @@
 }
 
 .contact-hero h1 {
-    font-size: 56px;
+    font-size: clamp(34px, 6vw, 56px);
     color: #0f172a;
     margin-bottom: 20px;
     margin-top: 15px;
@@ -576,7 +576,7 @@
 .contact-wrapper {
     display: flex;
     max-width: 1100px;
-    margin: -100px auto 100px;
+    margin: -100px auto clamp(40px, 8vh, 100px);
     /* Negative margin for overlap */
     background: #fff;
     border-radius: 20px;
@@ -584,7 +584,7 @@
     overflow: hidden;
     position: relative;
     z-index: 10;
-    padding: 10px;
+    padding: clamp(5px, 2vw, 10px);
     /* Small gap for inner border feel */
 }
 
@@ -593,7 +593,7 @@
     flex: 2;
     /* 40% width */
     background: #0f172a;
-    padding: 50px;
+    padding: clamp(30px, 5vw, 50px);
     color: #fff;
     border-radius: 16px;
     /* Inner radius */
@@ -704,7 +704,7 @@
     flex: 3;
     /* 60% width */
     background: #fff;
-    padding: 50px;
+    padding: clamp(30px, 5vw, 50px);
 }
 
 .form-group {

@@ -1,7 +1,7 @@
 /* ===== GENERAL STYLES ===== */
 
 section {
-  padding: 80px 8%;
+  padding: clamp(60px, 10vh, 100px) 5%;
   position: relative;
 }
 
@@ -24,12 +24,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 8%;
+  padding: clamp(100px, 15vh, 140px) 5% clamp(60px, 10vh, 100px);
   background: #ffffff;
   position: relative;
   overflow: hidden;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: clamp(30px, 5vw, 40px);
 }
 
 /* LEFT CONTENT */
@@ -211,18 +211,21 @@ p {
 /* ===== PROJECT FEATURES MODERN ===== */
 .project-features-modern {
   background: #ffffff;
-  padding: 100px 8%;
+  padding: clamp(60px, 10vh, 100px) 5%;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .project-features-modern h2 {
-  font-size: 42px;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 800;
+  /* Extra Bold */
   color: #0f172a;
-  margin-bottom: 60px;
+  margin-bottom: clamp(30px, 6vw, 50px);
   position: relative;
   z-index: 2;
+  letter-spacing: -1px;
 }
 
 /* FEATURES WRAPPER */
@@ -319,7 +322,7 @@ p {
 .project-process-modern {
   background: #f8fafc;
   /* Subtle light gray background */
-  padding: 120px 8%;
+  padding: clamp(80px, 15vh, 120px) 5%;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -340,10 +343,10 @@ p {
 }
 
 .project-process-modern h2 {
-  font-size: 48px;
+  font-size: clamp(34px, 6vw, 48px);
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 80px;
+  margin-bottom: clamp(60px, 10vw, 80px);
   position: relative;
   z-index: 2;
   letter-spacing: -1px;
@@ -536,14 +539,14 @@ p {
 /* ===== TEAM ===== */
 .project-team {
   background: #ffffff;
-  padding: 100px 8%;
+  padding: clamp(60px, 10vh, 100px) 5%;
   text-align: center;
 }
 
 .project-team h2 {
-  font-size: 42px;
+  font-size: clamp(32px, 5vw, 42px);
   color: #0f172a;
-  margin-bottom: 60px;
+  margin-bottom: clamp(40px, 8vw, 60px);
 }
 
 .team-wrap {
@@ -604,7 +607,7 @@ p {
 /* ===== TECHNOLOGY SECTION ===== */
 
 .project-tech {
-  padding: 110px 8%;
+  padding: clamp(60px, 10vh, 110px) 5%;
   background: linear-gradient(135deg, #f8fafc, #ffffff);
   text-align: center;
 }
@@ -612,10 +615,10 @@ p {
 /* TITLE */
 
 .tech-title {
-  font-size: 44px;
+  font-size: clamp(32px, 5vw, 44px);
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 70px;
+  margin-bottom: clamp(40px, 8vw, 70px);
 }
 
 /* GRID */
@@ -727,7 +730,7 @@ p {
 /* ===== TESTIMONIAL SECTION ===== */
 
 .project-testimonials {
-  padding: 120px 8%;
+  padding: clamp(80px, 15vh, 120px) 5%;
   background: linear-gradient(135deg, #020617, #0f172a);
   text-align: center;
   color: white;
@@ -736,8 +739,8 @@ p {
 /* TITLE */
 
 .testimonial-title {
-  font-size: 44px;
-  margin-bottom: 70px;
+  font-size: clamp(32px, 5vw, 44px);
+  margin-bottom: clamp(40px, 8vw, 70px);
   font-weight: 700;
 }
 
