@@ -607,10 +607,10 @@
 }
 
 .orbit-pro-title {
-  font-size: clamp(34px, 6vw, 56px);
+  font-size: clamp(34px, 5.5vw, 50px);
   font-weight: 800;
   /* Extra bold */
-  margin-bottom: clamp(20px, 6vw, 40px);
+  margin-bottom: clamp(20px, 4vw, 40px);
   color: #0f172a;
   letter-spacing: -1px;
 }
@@ -620,9 +620,23 @@
 .orbit-container {
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 520px;
   aspect-ratio: 1 / 1;
   margin: auto;
+  transition: transform 0.4s ease;
+}
+
+/* SMART SCALING FOR LAPTOPS */
+@media (min-width: 1025px) and (max-height: 900px) {
+  .orbit-container {
+    transform: scale(0.85);
+  }
+}
+
+@media (min-width: 1025px) and (max-height: 750px) {
+  .orbit-container {
+    transform: scale(0.75);
+  }
 }
 
 /* BACKGROUND BLOB */
@@ -660,8 +674,8 @@
 }
 
 .core-inner {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: white;
   color: white;
@@ -694,8 +708,8 @@
 
 .orbit-node {
   position: absolute;
-  width: 150px;
-  padding: 16px 12px;
+  width: 140px;
+  padding: 14px 12px;
   border-radius: 18px;
   background: white;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -756,35 +770,35 @@
 /* POSITIONS */
 
 .n1 {
-  top: -40px;
+  top: -25px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -70px;
 }
 
 .n2 {
   top: 15%;
-  right: -60px;
+  right: -45px;
 }
 
 .n3 {
   bottom: 15%;
-  right: -60px;
+  right: -45px;
 }
 
 .n4 {
-  bottom: -40px;
+  bottom: -25px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -70px;
 }
 
 .n5 {
   bottom: 15%;
-  left: -60px;
+  left: -45px;
 }
 
 .n6 {
   top: 15%;
-  left: -60px;
+  left: -45px;
 }
 
 @media (max-width: 640px) {
