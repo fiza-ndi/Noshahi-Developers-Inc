@@ -427,16 +427,18 @@ h6 {
   .nav {
     width: 100% !important;
     margin: 0 !important;
-    padding: 10px 15px !important;
+    padding: 8px 15px !important;
     top: 0 !important;
-    height: 65px;
-    background: white !important;
-    /* Force white background for visibility */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    left: 0 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 10000 !important;
   }
 
   .nav .logo img {
-    height: 38px !important;
+    height: 35px !important;
   }
 
   .nav-links {
