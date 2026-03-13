@@ -837,9 +837,15 @@
 
 .projects-pro {
   padding: clamp(40px, 10vh, 60px) 8% 0;
-  /* No bottom padding */
+  /* No bottom padding on mobile/tablet */
   background: #ffffff;
-  /* Consistent white background */
+}
+
+/* Desktop override for breathing room */
+@media (min-width: 1025px) {
+  .projects-pro {
+    padding-bottom: 80px;
+  }
 }
 
 .projects-title {
@@ -959,7 +965,13 @@
   text-align: center;
   max-width: 720px;
   margin: 0 auto 20px;
-  /* even smaller */
+}
+
+@media (min-width: 1025px) {
+  .impact-head {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
 }
 
 .impact-tag {
