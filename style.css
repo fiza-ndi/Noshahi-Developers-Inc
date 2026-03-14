@@ -1,20 +1,19 @@
-/* ===== HERO 3D MODERN ===== */
-
-
-
-/* ===== HERO 3D MODERN ===== */
-
-/* --- PORTFOLIO HERO SYNCED --- */
-.portfolio-hero {
-  background: #ffffff;
-  padding: clamp(100px, 15vh, 140px) 5% clamp(60px, 10vh, 100px);
-  min-height: 85vh;
-  display: flex !important;
-  align-items: center;
+/* NAVBAR */
+.nav {
+  display: flex;
   justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+  padding: 15px 5%;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: clamp(50px, 6vw, 70px); /* Increased size */
+  max-width: 100%;
 }
 
 .portfolio-hero .hero-left {
@@ -303,7 +302,7 @@
 .trusted-section {
   background: #f1f5f9;
   /* Light Slate for better card contrast */
-  padding: clamp(60px, 10vw, 120px) 0;
+  padding: clamp(30px, 5vw, 60px) 0; /* Reduced from 60px/120px */
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -367,7 +366,7 @@
 
 /* SOFT TYPOGRAPHY - YELLOW THEME */
 .soft-title-wrap {
-  margin-bottom: 80px;
+  margin-bottom: 40px; /* Reduced from 80px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -432,7 +431,7 @@
   width: max-content;
   animation: scrollCloud 50s linear infinite;
   /* Slower, more graceful */
-  padding: 30px 0;
+  padding: 15px 0; /* Reduced from 30px */
 }
 
 /* GLASS CARDS */
@@ -450,11 +449,16 @@
   box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.02),
     inset 0 0 10px rgba(255, 255, 255, 0.5);
+  flex: 0 0 calc(33.333vw - 40px); /* Exactly 3 cards visible */
+  min-height: 250px; /* Added height for better proportions */
+  box-sizing: border-box;
 }
 
 .glass-card-soft img {
-  height: 40px;
+  height: clamp(80px, 8vw, 150px);
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
   transition: all 0.5s ease;
 }
 
@@ -501,10 +505,12 @@
   .glass-card-soft {
     padding: 25px 35px;
     border-radius: 20px;
+    flex: 0 0 calc(33.333vw - 20px); /* 3 cards visible on mobile */
+    min-height: 150px;
   }
 
   .glass-card-soft img {
-    height: 30px;
+    height: clamp(40px, 6vw, 70px);
   }
 
   .trustCloud {
@@ -1253,35 +1259,45 @@
 /* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
-
   .hero-3d {
     flex-direction: column;
     text-align: center;
+    padding-top: 120px; /* Added extra padding to prevent overlap with navbar */
+    overflow: visible;
   }
 
   .hero-left {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-right {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px; /* Increased margin */
   }
 
   .hero-buttons {
     justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
   }
 
-  .hero-buttons button {
-    width: 220px;
+  .hero-buttons button,
+  .hero-buttons a {
+    width: auto; /* Let them size naturally or specify a min-width */
+    min-width: 160px;
   }
 
   .hero-3d h1 {
-    font-size: 34px;
+    font-size: 38px; /* Slightly adjusted */
+    margin-top: 15px;
   }
 
   .hero-3d p {
     font-size: 16px;
+    margin-bottom: 25px;
   }
 
 }

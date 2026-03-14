@@ -430,15 +430,16 @@ h6 {
     padding: 8px 15px !important;
     top: 0 !important;
     left: 0 !important;
-    background: rgba(255, 255, 255, 0.9) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Stronger shadow */
     z-index: 10000 !important;
   }
 
   .nav .logo img {
-    height: 35px !important;
+    height: 45px !important; /* Increased from 35px */
+    width: auto !important;
   }
 
   .nav-links {
