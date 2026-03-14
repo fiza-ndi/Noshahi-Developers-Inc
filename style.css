@@ -809,7 +809,7 @@
 
 @media (max-width: 640px) {
   .orbit-container {
-    transform: scale(0.65);
+    transform: scale(0.9); /* Increased from 0.65 */
     transform-origin: center;
   }
 
@@ -820,7 +820,7 @@
 
 @media (max-width: 480px) {
   .orbit-container {
-    transform: scale(0.5);
+    transform: scale(0.85); /* Increased from 0.5 */
   }
 
   .orbit-pro {
@@ -1377,24 +1377,25 @@
 
   .orbit-pro-wrap {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px; /* Increased from 360px */
     height: auto;
     aspect-ratio: 1 / 1;
   }
 
   .orbit-node {
-    width: 110px;
-    font-size: 13px;
+    width: 120px; /* Increased from 110px */
+    font-size: 14px; /* Increased from 13px */
+    padding: 12px 10px;
   }
 
   .orbit-node i {
-    font-size: 20px;
+    font-size: 24px; /* Increased from 20px */
   }
 
   .core-inner {
-    width: 140px;
-    height: 140px;
-    font-size: 13px;
+    width: 150px; /* Increased from 140px */
+    height: 150px; /* Increased from 140px */
+    font-size: 14px; /* Increased from 13px */
   }
 
 }
@@ -1407,8 +1408,7 @@
   .orbit-container {
     position: relative;
     width: 100%;
-    max-width: 300px;
-    /* Increased for better visibility */
+    max-width: 380px; /* Increased from 300px */
     aspect-ratio: 1 / 1;
     margin: 0 auto;
   }
@@ -1420,8 +1420,8 @@
   }
 
   .orbit-node {
-    width: 80px;
-    padding: 8px 4px;
+    width: 100px; /* Increased from 80px */
+    padding: 10px 8px; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1429,33 +1429,34 @@
   }
 
   .orbit-node span {
-    font-size: 10px;
+    font-size: 11px; /* Increased from 10px */
     display: block;
     line-height: 1.2;
+    margin-top: 4px;
   }
 
   .orbit-node i {
-    font-size: 14px;
+    font-size: 20px; /* Increased from 14px */
     margin-bottom: 2px;
   }
 
   /* Adjust positioning to prevent cutoff */
   .n1 {
-    top: -15px;
+    top: -20px; /* Adjusted */
   }
 
   .n4 {
-    bottom: -15px;
+    bottom: -20px; /* Adjusted */
   }
 
   .n2 {
     top: 15%;
-    right: -10px;
+    right: -20px; /* Adjusted */
   }
 
   .n3 {
     bottom: 15%;
-    right: -10px;
+    right: -20px; /* Adjusted */
   }
 
   .n1,
@@ -1464,13 +1465,13 @@
   }
 
   .core-inner {
-    width: 110px;
-    height: 110px;
-    font-size: 12px;
+    width: 130px; /* Increased from 110px */
+    height: 130px; /* Increased from 110px */
+    font-size: 13px; /* Increased from 12px */
   }
 
   .core-inner img {
-    padding: 12px;
+    padding: 10px;
   }
 
   .node-pop {
