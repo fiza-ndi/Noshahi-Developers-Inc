@@ -1,3 +1,191 @@
+/* ===== HERO STANDARD (Global Across Pages) ===== */
+
+.hero-standard {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(10px, 2vh, 40px) 5%;
+  min-height: auto; /* Let content dictate height to prevent overflow */
+  background: linear-gradient(135deg, #f0f2f5, #ffffff);
+  overflow: visible; /* To prevent clipping on mobile */
+  position: relative;
+  z-index: 1;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+/* LEFT SIDE */
+.hero-standard-left {
+  max-width: 560px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-standard-left .tag {
+  display: inline-block;
+  background: #fde68a;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #92400e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-standard-left h1 {
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+.hero-standard-left .highlight {
+  color: #d97706;
+  position: relative;
+}
+
+.hero-standard-left .highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 8px;
+  background: #fde68a;
+  border-radius: 8px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.hero-standard-left p {
+  color: #475569;
+  font-size: clamp(16px, 2.5vw, 18px);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.hero-standard-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  min-width: clamp(280px, 100%, 480px); /* Keep structural min-width */
+}
+
+.hero-standard-right::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 15%;
+  width: 55%;
+  height: 90%;
+  background-image: radial-gradient(#f59e0b 2px, transparent 2px);
+  background-size: 20px 20px;
+  z-index: -1;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+
+/* For image-based right side */
+.hero-standard-right .hero-img {
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  transition: transform 0.5s ease;
+}
+
+.hero-standard-right .hero-img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== DECORATIVE SHAPES ===== */
+.hero-standard::before,
+.hero-standard::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-standard::before {
+  width: 300px;
+  height: 300px;
+  background: rgba(249, 215, 95, 0.2);
+  top: -80px;
+  left: -80px;
+}
+
+.hero-standard::after {
+  width: 400px;
+  height: 400px;
+  background: rgba(251, 191, 36, 0.15);
+  bottom: -100px;
+  right: -100px;
+}
+
+/* ===== BUTTON ALIGNMENT FOR STANDARD HERO ===== */
+.hero-standard-left .hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* RESPONSIVE HERO STANDARD */
+@media (max-width: 1024px) {
+  .hero-standard {
+    padding: 100px 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-standard {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-standard-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-standard::before,
+  .hero-standard::after {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .hero-standard-left .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-standard-left h1 {
+    font-size: 36px;
+  }
+}
+
+/* ===== HERO 3D MODERN ===== */
+
+/* --- PORTFOLIO HERO SYNCED --- */
+.portfolio-hero {
+  background: #ffffff;
+  padding: clamp(100px, 15vh, 140px) 5% clamp(60px, 10vh, 100px);
+  min-height: 85vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: visible; /* Changed from hidden to avoid clipping on mobile */
+  gap: clamp(30px, 5vw, 60px);
+}
+
 /* NAVBAR */
 .nav {
   display: flex;
@@ -126,7 +314,7 @@
   z-index: 1;
 }
 
-.portfolio-hero .circle-wrap {
+.circle-wrap {
   position: relative;
   width: clamp(280px, 100%, 480px);
   height: clamp(280px, 100%, 480px);
@@ -137,7 +325,7 @@
 
 /* GOLD RING */
 
-.portfolio-hero .circle-bg {
+.circle-bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -186,7 +374,7 @@
 
 /* IMAGE */
 
-.portfolio-hero .hero-person {
+.hero-person {
   width: 380px;
   height: 380px;
   object-fit: cover;
@@ -199,7 +387,7 @@
 
 /* FLOATING CARDS */
 
-.portfolio-hero .float-card {
+.float-card {
   position: absolute;
   background: white;
   padding: 15px 25px;
@@ -213,19 +401,19 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.portfolio-hero .card1 {
-  top: 0;
+.card1 {
+  top: 10%;
   left: 0;
   animation-delay: 0s;
 }
 
-.portfolio-hero .card2 {
+.card2 {
   bottom: 40px;
   left: -20px;
   animation-delay: 1s;
 }
 
-.portfolio-hero .card3 {
+.card3 {
   right: -40px;
   top: 15%;
   animation-delay: 2s;
@@ -243,37 +431,35 @@
   }
 }
 
-/* ===== BUTTON — 3D PILL ===== */
+/* ===== BUTTON — MODERN ===== */
 
 .btn {
-  background: #ffc400c9;
-  color: rgb(0, 0, 0);
+  background: #f4c430;
+  color: #000;
   border: none;
-  padding: 16px 34px;
-  border-radius: 999px;
-  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-
-  box-shadow:
-    0 12px 0 #ffa600d5,
-    0 25px 50px rgba(0, 0, 0, 0.18);
-
-  transition: .25s;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn:hover {
-  transform: translateY(-4px) scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(244, 196, 48, 0.3);
 }
 
 .btn:active {
-  transform: translateY(8px);
-  box-shadow: 0 3px 0 #0b5e59;
+  transform: scale(0.95);
 }
 
 /* ===== HERO IMAGE — FLOAT CARD ===== */
 
 .hero-img {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   border-radius: 30px;
 
   box-shadow:
@@ -390,7 +576,7 @@
 .trusted-title-main {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 800;
-  color: #f59e0b;
+  color: #0f172a;
   margin-bottom: 24px;
   text-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
 }
@@ -606,10 +792,25 @@
 /* ===== ORBIT PRO ===== */
 
 .orbit-pro {
-  padding: clamp(20px, 5vh, 40px) 0;
-  background: #ffffff;
+  padding: clamp(60px, 8vh, 80px) 0;
+  background: #f8fafc;
+  position: relative;
   text-align: center;
   overflow: hidden;
+}
+
+.orbit-pro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+    radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 30px 30px;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .orbit-pro-title {
@@ -619,6 +820,8 @@
   margin-bottom: clamp(20px, 4vw, 40px);
   color: #0f172a;
   letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ORBIT CONTAINER */
@@ -1137,37 +1340,46 @@
 
 
 
-
-/* ===== TESTIMONIALS ===== */
+/* ===== TESTIMONIALS PRO ===== */
 
 .testimonials {
-  padding: 130px 8%;
-  background: #f9fafb;
+  padding: clamp(60px, 10vw, 120px) 0;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
   text-align: center;
 }
 
+.section-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900; /* Made bolder as requested */
+  color: #0f172a;
+  margin-bottom: clamp(40px, 6vw, 60px);
+  letter-spacing: -0.5px;
+}
+
+/* CARDS WRAPPER */
+
 .testi-wrapper {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* Standardized to 250px */
-  gap: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 5%;
 }
 
 /* CARD */
 
 .testi-card {
   background: white;
-  padding: 36px;
-  border-radius: 26px;
+  width: 380px;
+  padding: 40px;
+  border-radius: 24px;
   text-align: left;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
-  transition: .4s;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.1);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
-
-/* glowing edge animation */
 
 .testi-card::before {
   content: "";
@@ -1208,17 +1420,24 @@
 .testi-card h4 {
   margin: 0;
   color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
 }
 
 .testi-card span {
   font-size: 13px;
   color: #64748b;
+  font-weight: 500;
 }
 
 .testi-card p {
   color: #475569;
-  line-height: 1.7;
-  margin: 16px 0;
+  line-height: 1.8;
+  margin: 0 0 24px 0;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 /* STARS */
@@ -1260,13 +1479,6 @@
 
 @media (max-width: 768px) {
   .hero-3d {
-    flex-direction: column;
-    text-align: center;
-    padding-top: 120px; /* Added extra padding to prevent overlap with navbar */
-    overflow: visible;
-  }
-
-  .hero-left {
     width: 100%;
     display: flex;
     flex-direction: column;
