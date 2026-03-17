@@ -12,6 +12,14 @@
   position: relative;
   z-index: 1;
   gap: clamp(20px, 3vw, 40px);
+  margin-top: 80px; /* Add margin to account for fixed navbar on mobile */
+}
+
+/* Desktop - no margin needed */
+@media (min-width: 993px) {
+  .hero-standard {
+    margin-top: 0;
+  }
 }
 
 /* LEFT SIDE */
@@ -144,6 +152,7 @@
     flex-direction: column;
     text-align: center;
     gap: 40px;
+    margin-top: 70px; /* Reduced margin for tablet */
   }
   
   .hero-standard-left {
@@ -166,6 +175,11 @@
 }
 
 @media (max-width: 576px) {
+  .hero-standard {
+    margin-top: 60px; /* Further reduced for mobile */
+    padding: 20px 5%; /* Reduced padding */
+  }
+  
   .hero-standard-left h1 {
     font-size: 36px;
   }
@@ -184,6 +198,29 @@
   position: relative;
   overflow: visible; /* Changed from hidden to avoid clipping on mobile */
   gap: clamp(30px, 5vw, 60px);
+  margin-top: 80px; /* Add margin for mobile navbar */
+}
+
+/* Desktop - no margin needed */
+@media (min-width: 993px) {
+  .portfolio-hero {
+    margin-top: 0;
+  }
+}
+
+/* Mobile responsive for portfolio hero */
+@media (max-width: 992px) {
+  .portfolio-hero {
+    margin-top: 70px; /* Reduced for tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-hero {
+    margin-top: 60px; /* Further reduced for mobile */
+    padding: 40px 5% 20px 5%; /* Reduced padding */
+    min-height: auto; /* Let content dictate height */
+  }
 }
 
 /* NAVBAR */
