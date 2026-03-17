@@ -57,7 +57,7 @@ h6 {
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  border-bottom: none;
 }
 
 /* Glass state on scroll */
@@ -67,7 +67,7 @@ h6 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: none;
 }
 
 .logo img {
