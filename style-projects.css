@@ -952,6 +952,11 @@ p {
   font-size: clamp(32px, 5vw, 44px);
   margin-bottom: clamp(40px, 8vw, 70px);
   font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* GRID */
@@ -1029,6 +1034,46 @@ p {
 .testimonial-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* MOBILE RESPONSIVE FOR TESTIMONIALS */
+@media (max-width: 768px) {
+  .project-testimonials {
+    padding: 60px 4%;
+  }
+  
+  .testimonial-title {
+    font-size: clamp(28px, 6vw, 36px);
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .testimonial-wrap {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5px;
+  }
 }
 
 
