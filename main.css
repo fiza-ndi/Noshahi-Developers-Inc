@@ -194,9 +194,9 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  height: 1px;
+  height: 3px; /* Make the highlight more visible */
   background: linear-gradient(90deg, transparent, #f59e0b, transparent);
-  opacity: 0.3;
+  opacity: 0.8; /* Make it more prominent */
 }
 
 .footer-container {
@@ -240,6 +240,20 @@ h6 {
   margin-bottom: 20px;
   letter-spacing: -0.5px;
   text-transform: none;
+  position: relative;
+}
+
+/* Yellow underline for logo */
+.footer-logo::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #f59e0b;
+  border-radius: 2px;
+  opacity: 0.8;
 }
 
 /* text */

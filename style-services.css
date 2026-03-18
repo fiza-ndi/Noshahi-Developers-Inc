@@ -186,17 +186,34 @@
   gap: 35px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center; /* Center cards horizontally */
+  align-items: center; /* Center cards vertically */
 }
 
 @media(max-width: 1024px) {
   .services-cards {
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
 
 @media(max-width: 768px) {
   .services-cards {
     grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    max-width: 400px; /* Better centering for single card */
+  }
+}
+
+@media(max-width: 480px) {
+  .services-cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    max-width: 320px; /* Compact for small mobile */
+    gap: 25px;
   }
 }
 
@@ -299,13 +316,17 @@
   padding: clamp(60px, 10vh, 100px) 5%;
   background: #fefbf0;
   /* subtle warm yellowish background */
+  text-align: center; /* Center the entire section */
 }
 
 .service-detail-container {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   gap: 50px;
   flex-wrap: wrap;
+  max-width: 1200px; /* Limit width for better centering */
+  margin: 0 auto; /* Center the container */
 }
 
 /* LEFT IMAGE */
@@ -420,6 +441,12 @@
 .service-ux {
   background: #fff8e5;
   /* slightly different warm background */
+  text-align: center; /* Ensure centering for this specific section */
+}
+
+.service-ux .service-detail-container {
+  justify-content: center; /* Ensure horizontal centering */
+  text-align: center; /* Center text content */
 }
 
 /* FLOATING IMAGE ANIMATION (slightly different speed & movement) */

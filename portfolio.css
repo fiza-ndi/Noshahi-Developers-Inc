@@ -608,11 +608,11 @@ body {
     .portfolio-hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 140px;
+        padding-top: 0px;
     }
 
     .portfolio-hero .hero-left {
-        margin-bottom: 60px;
+        margin-bottom: 0px;
     }
 
     .bento-grid {

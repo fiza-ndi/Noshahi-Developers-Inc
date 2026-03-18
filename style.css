@@ -176,8 +176,8 @@
 
 @media (max-width: 576px) {
   .hero-standard {
-    margin-top: 60px; /* Further reduced for mobile */
-    padding: 20px 5%; /* Reduced padding */
+    margin-top: 0px; /* Remove space completely */
+    padding: 10px 5%; /* Minimal padding for content */
   }
   
   .hero-standard-left h1 {
@@ -211,13 +211,13 @@
 /* Mobile responsive for portfolio hero */
 @media (max-width: 992px) {
   .portfolio-hero {
-    margin-top: 70px; /* Reduced for tablet */
+    margin-top: 0px; /* Reduced for tablet */
   }
 }
 
 @media (max-width: 576px) {
   .portfolio-hero {
-    margin-top: 60px; /* Further reduced for mobile */
+    margin-top: 0px; /* Further reduced for mobile */
     padding: 40px 5% 20px 5%; /* Reduced padding */
     min-height: auto; /* Let content dictate height */
   }
