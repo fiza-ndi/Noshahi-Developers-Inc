@@ -726,37 +726,20 @@ p {
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #f59e0b; /* Changed from #fff to brand yellow */
+  border: 4px solid #f59e0b;
   box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
-  margin: 0 auto 25px; /* Added auto horizontal margins to center */
-  display: block; /* Required for margin auto to work on img */
+  margin: 0 auto 25px;
+  display: block;
   transition: all 0.5s ease;
   position: relative;
   z-index: 2;
-}
-
-.team-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-  border-color: rgba(245, 158, 11, 0.4);
-  background: #fff;
-}
-
-.team-card:hover img {
-  transform: scale(1.08) translateY(-5px);
-  border-color: #f59e0b;
 }
 
 .team-card h4 {
   font-size: 22px;
   font-weight: 800;
   margin-bottom: 8px;
-  color: #f59e0b; /* Yellow by default */
-  transition: color 0.3s ease;
-}
-
-.team-card:hover h4 {
-  color: #0f172a; /* Swap to navy on hover */
+  color: #0f172a;
 }
 
 .team-card span {
@@ -773,14 +756,8 @@ p {
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
-}
-
-.team-card:hover .team-socials {
   opacity: 1;
-  transform: translateY(0);
+  transition: all 0.4s ease;
 }
 
 .team-socials .social-icon {
@@ -836,6 +813,7 @@ p {
 .tech-wrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
   gap: 35px;
 }
 
@@ -850,10 +828,10 @@ p {
   font-size: 18px;
   color: #0f172a;
   cursor: pointer;
-
+ 
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(8px);
-
+ 
   transition: 0.5s ease;
   overflow: hidden;
 }
@@ -916,23 +894,20 @@ p {
   }
 }
 
-.tech-wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px;
-}
 
 /* Tablet */
 @media(max-width:900px) {
   .tech-wrap {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center;
   }
 }
 
 /* Mobile */
 @media(max-width:500px) {
   .tech-wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(200px, 320px);
+    justify-content: center;
   }
 }
 
@@ -963,9 +938,14 @@ p {
 
 .testimonial-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* Standardized to 250px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 40px;
+}
+@media (min-width: 1200px) {
+  .testimonial-wrap {
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns on large screens to avoid left-align */
+  }
 }
 
 /* CARD */

@@ -339,6 +339,29 @@
   transform: translateY(-4px);
 }
 
+.btn-white-premium {
+  background: #ffffff;
+  color: #010816;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.btn-white-premium:hover {
+  background: #010816;
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
 /* RIGHT */
 
 .portfolio-hero .hero-right {
@@ -439,48 +462,23 @@
 }
 
 .card1 {
-  top: 10%;
-  left: 0;
+  top: 20%;
+  left: -80px;
   animation-delay: 0s;
 }
 
 .card2 {
-  bottom: 40px;
-  left: -20px;
+  top: 10%;
+  right: -90px;
+  transform: translateY(-50%);
   animation-delay: 1s;
 }
 
 .card3 {
-  right: -40px;
-  top: 15%;
+  bottom: -20px;
+  left: 40%;
+  transform: translateX(-50%);
   animation-delay: 2s;
-}
-
-@keyframes floatIcon {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-/* ===== BUTTON — MODERN ===== */
-
-.btn {
-  background: #f4c430;
-  color: #000;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
 }
 
 .btn:hover {
@@ -725,19 +723,25 @@
     padding: clamp(20px, 4vh, 40px) 0;
   }
 
+  .trust-cloud-container {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
   .glass-card-soft {
-    padding: 25px 35px;
+    padding: 25px 10px; /* Reduced from 55px/15px */
     border-radius: 20px;
-    flex: 0 0 calc(33.333vw - 20px); /* 3 cards visible on mobile */
-    min-height: 150px;
+    flex: 0 0 calc(30vw - 12px); /* Adjusted to fit 3 cards better */
+    min-height: 140px; /* Scaled down for mobile */
+    width: auto;
   }
 
   .glass-card-soft img {
-    height: clamp(40px, 6vw, 70px);
+    height: clamp(40px, 12vw, 65px);
   }
 
   .trustCloud {
-    gap: 20px;
+    gap: 15px; /* Reduced from 25px */
   }
 }
 
@@ -1136,7 +1140,7 @@
   position: relative;
   border-radius: 26px;
   overflow: hidden;
-  height: 360px;
+  height: 280px;
   cursor: pointer;
   transform-style: preserve-3d;
   transition: .5s;
@@ -1714,9 +1718,9 @@
   }
 
   .core-inner {
-    width: 130px; /* Increased from 110px */
-    height: 130px; /* Increased from 110px */
-    font-size: 13px; /* Increased from 12px */
+    width: 200px; /* Increased from 110px */
+    height: 200px; /* Increased from 110px */
+    font-size: 15px; /* Increased from 12px */
   }
 
   .core-inner img {
@@ -1834,7 +1838,7 @@
   }
 
   .proj-card {
-    height: 300px;
+    height: 220px;
   }
 
   .proj-overlay {
