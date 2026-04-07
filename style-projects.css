@@ -106,12 +106,7 @@ p {
   max-width: 550px;
 }
 
-/* BUTTONS */
-.premium-btns {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 50px;
-}
+
 
 .glow-btn {
   position: relative;
