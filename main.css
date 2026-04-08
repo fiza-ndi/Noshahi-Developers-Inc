@@ -8,8 +8,8 @@
 /* ===== GLOBAL BODY ===== */
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #020617 !important; /* Force Global Dark Theme */
-  color: #fcfcfc !important;
+  background: #ffffff;
+  color: #111;
   overflow-x: hidden !important;
   width: 100%;
   line-height: 1.6;
@@ -17,6 +17,7 @@ body {
 }
 
 html {
+  background: #ffffff;
   overflow-x: hidden !important;
   width: 100%;
 }
@@ -36,11 +37,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ffffff !important;
+  color: #111;
 }
 
 p, span, li, a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(17, 17, 17, 0.9);
 }
 
 .highlight {

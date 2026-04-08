@@ -17,11 +17,48 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(2, 6, 23, 0.8), rgba(15, 23, 42, 0.4)), 
+  background: linear-gradient(135deg, rgba(1, 22, 54, 0.85), rgba(10, 35, 75, 0.6)),
               url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
-  z-index: -3;
+  background-blend-mode: overlay;
+  z-index: -1;
   animation: heroZoom 20s linear infinite alternate;
-  opacity: 0.6;
+  opacity: 0.95;
+}
+.hero-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.hero-video-wrap video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.1) brightness(0.85) contrast(1.05);
+}
+.hero-standard-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+}
+.hero-standard-right .hero-img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  margin: 0 auto;
+}
+.hero-standard-right .hero-img:hover {
+  transform: scale(1.02);
 }
 
 /* Desktop - no margin needed */
@@ -75,7 +112,7 @@
 }
 
 .hero-standard-left p {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.85);
   font-size: clamp(16px, 2.5vw, 18px);
   margin-bottom: 30px;
   line-height: 1.6;
@@ -159,19 +196,26 @@
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    margin-top: 70px; /* Reduced margin for tablet */
+    margin-top: 70px;
+    padding: 80px 5% 40px;
   }
   
   .hero-standard-left {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .hero-standard-right {
+    width: 100%;
+    max-width: 520px;
   }
 
   .hero-standard::before,
   .hero-standard::after {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   
   .hero-standard-left .hero-buttons {
@@ -181,14 +225,32 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero-standard {
+    padding: 60px 5% 30px;
+  }
+  .hero-standard-left h1 {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 576px) {
   .hero-standard {
-    margin-top: 0px; /* Remove space completely */
-    padding: 10px 5%; /* Minimal padding for content */
+    margin-top: 0;
+    padding: 45px 4% 25px;
+    min-height: auto;
   }
   
   .hero-standard-left h1 {
-    font-size: 36px;
+    font-size: 28px;
+  }
+
+  .hero-standard-left p {
+    font-size: 14px;
+  }
+
+  .hero-standard-right {
+    display: none;
   }
 }
 
